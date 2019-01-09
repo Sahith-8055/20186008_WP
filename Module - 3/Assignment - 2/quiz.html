@@ -18,7 +18,7 @@
 			/*padding: 20px;*/
 			margin-bottom: 1px;
 		}
-		.box {
+		/*.box {
   			width: 100px;
   			margin: 50px auto;
   			background: #00bfb6;
@@ -40,6 +40,28 @@
   			border-bottom: 10px solid transparent;
   			left: 5px;
   			bottom: -19px;
+		}*/
+		.speech-bubble {
+		position: relative;
+		background: yellow;
+		border-radius: .4em;
+		width: 3em;
+		margin-left: 2em;
+	}
+
+		.speech-bubble:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 0;
+			border: 20px solid transparent;
+			border-top-color: yellow;
+			border-bottom: 0;
+			border-left: 0;
+			margin-left: -10px;
+			margin-bottom: -20px;
 		}
 		body {
 			background-color: white;
@@ -48,6 +70,19 @@
 			background-color: lightblue;
 			border-bottom: 1px solid lightblue;
 			padding-right: 2px;
+		}
+
+		.alert {
+			margin : 2em;
+		}
+		.Question - 1 {
+			margin-left: 20px;
+		}
+		.Question - 2 {
+			margin-top: 20px;
+		}
+		.button {
+			margin : 2em;
 		}
 	</style>
 </head>
@@ -58,12 +93,12 @@
 	</div>
 	<div class="quiz" style="border: 20px solid lightblue; border-bottom: lightblue">
 		<div class="Question - 1" style="border-bottom: 1px dashed black;">
-		<p align="left" style="font-family: Arial;"><b>Each computer has a built-in instruction set that it knows how to execute by design.</b></p>
-		<div class="box sb3">Hint</div>
+		<p align="left" style="font-family: Arial;"><b>1) Each computer has a built-in instruction set that it knows how to execute by design.</b></p>
+		<div class="speech-bubble">Hint</div>
 		<div class="alert alert-warning">
 			<button type="button" class="close" data-dismiss="alert">&times</button>
 			<button type="button" class="close" data-dismiss="alert">&gt</button>
-			<b>Recall that we use the computation to mean "the execution of a sequence of instructions by a computer with the intention of solving a given problem.</b>
+			<p style="margin-left: 20px; margin-right: 20px;">Recall that we use the computation to mean "the execution of a sequence of instructions by a computer with the intention of solving a given problem.</p>
 		</div>
 			<div class="radio">
   			<label><input type="radio" name="optradio">True</label>
@@ -77,8 +112,8 @@
 			</div>
 		</div>
 		<div class="Question - 2">
-		<p align="left" style="font-family: Arial;"><b>The computer uses intelligence to execute instructions.</b></p>
-		<div class="box sb3">Hint</div>
+		<p align="left" style="font-family: Arial;"><b>2) The computer uses intelligence to execute instructions.</b></p>
+		<div class="speech-bubble">Hint</div>
 		<div class="alert alert-warning">
 			<button type="button" class="close" data-dismiss="alert">&times</button>
 			<button type="button" class="close" data-dismiss="alert">&gt</button>
