@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<title>My Quiz</title>
+	<style type="text/css">
+		.alert {
+			/*padding: 20px;*/
+			margin-bottom: 1px;
+		}
+		.box {
+  			width: 100px;
+  			margin: 50px auto;
+  			background: #00bfb6;
+  			padding: 10px;
+  			text-align: center;
+  			font-weight: 900;
+  			color: #fff;
+  			font-family: TimesNewRoman;
+  			position:relative;
+		}
+		.sb3:before {
+  			content: "";
+  			width: 0px;
+  			height: 0px;
+  			position: absolute;
+  			border-left: 10px solid #00bfb6;
+  			border-right: 10px solid transparent;
+  			border-top: 10px solid #00bfb6;
+  			border-bottom: 10px solid transparent;
+  			left: 5px;
+  			bottom: -19px;
+		}
+		body {
+			background-color: white;
+		}
+		.page-header {
+			background-color: lightblue;
+			border-bottom: 1px solid lightblue;
+			padding-right: 2px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="page-header">
+		<marquee><h2 style="font-family: TimesNewRoman; font-weight: 50px"><b>Learning By Doing</b></h2></marquee>
+	</div>
+	<div class="quiz" style="border: 20px solid lightblue; border-bottom: lightblue">
+		<div class="Question - 1" style="border-bottom: 1px dashed black;">
+		<p align="left" style="font-family: Arial;"><b>Each computer has a built-in instruction set that it knows how to execute by design.</b></p>
+		<div class="box sb3">Hint</div>
+		<div class="alert alert-warning">
+			<button type="button" class="close" data-dismiss="alert">&times</button>
+			<button type="button" class="close" data-dismiss="alert">&gt</button>
+			<b>Recall that we use the computation to mean "the execution of a sequence of instructions by a computer with the intention of solving a given problem.</b>
+		</div>
+			<div class="radio">
+  			<label><input type="radio" name="optradio">True</label>
+			</div>
+			<div class="radio">
+  			<label><input type="radio" name="optradio">False</label>
+			</div>
+			<div class="alert alert-danger">
+			<button type="button" class="close" data-dismiss="alert">&times</button>
+  			<b>Incorrect. Each computer has a set of primitive instructions that is "wired" to execute. We call this the instruction set of the computer</b>
+			</div>
+		</div>
+		<div class="Question - 2">
+		<p align="left" style="font-family: Arial;"><b>The computer uses intelligence to execute instructions.</b></p>
+		<div class="box sb3">Hint</div>
+		<div class="alert alert-warning">
+			<button type="button" class="close" data-dismiss="alert">&times</button>
+			<button type="button" class="close" data-dismiss="alert">&gt</button>
+			<b>Recall that we said a computer executes the instructions given to it mechanically.</b>
+		</div>
+			<div class="radio">
+  			<label><input type="radio" name="optradio">True</label>
+			</div>
+			<div class="radio">
+  			<label><input type="radio" name="optradio">False</label>
+			</div>
+			<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert">&times</button>
+  			<b>Correct. A computer executes instructions automatically. Its main task is to simply execute the instructions given to it (from its instruction set) and remember their result as the computer goes on. The part that may require intelligence is expressing a corruption in terms of those instructions.</b>
+  			</div>
+		</div>
+		<p align="right" style="background-color: lightblue; height: 75px; padding-top: 28px; color: darkblue;">Reset this Activity</p>
+	</div>
+</div>
+</body>
+</html>
