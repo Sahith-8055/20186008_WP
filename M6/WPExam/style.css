@@ -1,0 +1,54 @@
+div {
+	text-overflow: ellipsis;
+}
+#main {
+	border: 1px solid lightblue;
+}
+.ex1 {
+	overflow: scroll;
+}
+.bottom-right {
+  position: relative;
+  bottom: 2px;
+  right: 1px;
+}
+.img-responsive {
+	opacity: 0.75;
+	padding-top: 30px;
+}
+#profile {
+	border: 5px solid lightblue;
+}
+.cspp {
+	margin-left: 8em;
+}
+#cspp1 {
+	border: 1px solid;
+  	padding: 10px;
+  	box-shadow: 5px 10px black;
+}
+#ads1 {
+	border: 1px solid;
+  	padding: 10px;
+  	box-shadow: 5px 10px black;
+}
+#db1 {
+	border: 1px solid;
+  	padding: 10px;
+  	box-shadow: 5px 10px black;
+}
+.ads {
+	margin-left: 8em;
+}
+.db {
+	margin-left: 8em;
+}
+.ics {
+	margin-left: 9.5em;
+}
+.cnf {
+	margin-left: 9em;
+}
+.cs {
+	margin-left: 9.5em;
+}
