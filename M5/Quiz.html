@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+	<title>Learn by doing</title>
+	<link rel="stylesheet" href="quiz.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type = "text/javascript" src = "quiz.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="style">
+		</div>
+		<div class="right-arrow">
+		</div>
+		<div class="style1">
+			<center><b><p id="text">Learning by doing</p></b></center>
+		</div>
+		<div class="left-arrow">
+		</div>
+		<div style="background-color: skyblue;width:100%">
+		</div>
+	</div>
+	<div class="window" id ="window">
+		<ul>
+		<li><p id = "question 1"></p></li>
+		<img src="hint.jpg" alt="Image Not Found" width="25px" data-toggle="collapse" data-target="#demo">
+		<div id="demo" class="collapse">
+		<div class="alert alert-warning alert-dismissible" id = "hint 1">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		</div>
+	    </div>
+	    <div id = "radio 1">
+	    </div>
+		<div id = "feedback 1">
+		</div>
+		<hr class="dotted">
+		<li><p id = "question 2"></p></li>
+		<img src="hint.jpg" alt="Image Not Found" width="25px" data-toggle="collapse" data-target="#demo1">
+		<div id="demo1" class="collapse">
+		<div class="alert alert-warning alert-dismissible" id = "hint 2">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		</div>
+		</div>
+		<div id = "radio 2">
+		</div>
+		<div id = "feedback 2">
+		</div>
+	</ul>
+	<div>
+		<button type = "button" style="float: left" id = "Prev" onclick="prev()">Prev</button>
+		<button type = "button" style="float: right" id = "Next" onclick="next()">Next</button>
+	</div>
+	</div>
+	<div class="window2">
+		<button type="button" onclick="reset()">Reset this Activity</button>
+	</div>
+</body>
+</html>
