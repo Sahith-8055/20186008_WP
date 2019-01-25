@@ -1,0 +1,86 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Comment</title>
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+	</head>
+
+
+	<body style="background-color: lightblue;">
+	<marquee><h1 style="font-weight: bold; margin-bottom: 0.67em;">Comments Section</h1></marquee>
+
+	<div class="form-group">
+		<b><label for="usr" style="padding-left: 10px;">
+			Name:
+		</label></b>
+		<input type="text" class="form-control" id="usr" placeholder="Name">
+	</div>
+	<br>
+
+	<div class="form-group">
+		<b><label for="comment" style="padding-left: 10px;">
+			Comment:
+		</label></b>
+		<textarea class="form-control" rows="5" id="comment" placeholder="Comment" onkeyup="Allow()"></textarea>
+	</div>
+	<br>
+
+	<div class="form-group">
+		<b><label for="password" style="padding-left: 10px;">
+			Password:
+		</label></b>
+		<input name="password" type="password" class="form-control" id="userpassword" placeholder="Password" onkeyup='check();'>
+	</div>
+	<br>
+
+	<div class="form-group">
+		<b><label for="confirmpassword" style="padding-left: 10px;">
+			Confirm Password:
+		</label></b>
+		<input type="password" name="confirm_password" id="confirm_password" onkeyup='check();'>
+		<span id="message"></span>
+	</div>
+	<br>
+	<button type="submit" class="btn btn-primary" value="postbutton" style="font-weight: bold;" onclick="insert()">Post Comment</button>
+	<div id="display"></div>
+
+	<script type="text/javascript">
+		var titles = [];
+		var titleInput = document.getElementById("comment");
+		var messageBox = document.getElementById("display");
+
+		function clearAndShow () {
+			titleInput.value = "";
+			messageBox.innerHTML = "";
+			messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
+		}
+
+		function insert () {
+		titles.push(titleInput.value);
+		clearAndShow();
+		}
+
+		var check = function() {
+			if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
+			    document.getElementById('message').style.color = 'green';
+			    document.getElementById('message').innerHTML = 'matching';
+			} else {
+				document.getElementById('message').style.color = 'red';
+				document.getElementById('message').innerHTML = 'not matching';
+			}
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<br> Password: <input type="password" id="mypassword" value="123">
+	<button type="button" onclick="myFunc()">Submit</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function myFunc() {
+			var x = document.getElementById('123');
+			var def = x.defaultValue;
+			var curr = x.value;
+			if (def == curr) {
+			    document.getElementById("demo").innerHTML = "You entered correct password";
+			} else {
+			    document.getElementById("demo").innerHTML = "You entered wrong password";
+			}
+		}
+	</script>
+</body>
+</html>
