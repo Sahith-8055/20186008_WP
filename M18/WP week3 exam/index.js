@@ -59,6 +59,7 @@ function load(index) {
 	document.getElementById("productdescription").innerHTML = catalog.products[index].description;
 }
 
+
 $(document).ready(function(){
     $("#edit").click(function(){
         $("#form1").toggle();
