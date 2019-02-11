@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <nav class="navbar navbar-inverse collapse navbar-collapse">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                  <form class="navbar-form navbar-left">
+                      <div class="form-group">
+                          <input type="text" class="form-control" [(ngModel)] = "text" [ngModelOptions]="{standalone: true}" id = "search" placeholder="Search">
+                          </div>
+                      <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                  </form>
+              </ul>
+            </div>
+        </div>
+    </nav>
+  <div class="row panel panel-default" *ngFor="let i of productsList | FilterPipe : text">
+    <div class="panel panel-default" >
+      <div class="col-md-3">
+        <div class="panel-body"><img src="../assets/shop/{{i.imageurl[0]}}" class="img-responsive product-view" alt="Image" routerLink="/Product/{{category}}/{{ i.id }}"></div>
+      </div>
+      <div class="col-md-9">
+        <div class="panel panel-heading product-title" style="text-align: center; cursor:pointer;"><h3 routerLink="/Product/{{category}}/{{ i.id }}">{{i.title}}</h3><h5>{{i.shortdescription}}</h5></div>
+          <div class="product-desc">Description : {{i.longdescription}}</div>
+          <hr>
+          <div class="product-price">Price : {{i.price}}</div>
+          <div class="product-stock">Quantity : {{i.quantity}}</div>
+          <button type="button" value="cart" style="float: right;" routerLink = "/products/{{ i.id }}">View Details</button>
+      </div>
+    </div>
+  </div>
+</div>

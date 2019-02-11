@@ -1,0 +1,95 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <div class="content-wrapper"> 
+  <div class="item-container">  
+    <div class="container"> 
+      <div class="col-md-12">
+
+        <div class="product col-md-3 service-image-left zoom">
+          <img id="item-display" class = "img-responsive" src="../assets/shop/{{productDetails?.imageurl[0]}}">
+        </div>
+        
+        <div class="container service1-items col-sm-2 col-md-2 pull-left">
+
+            <a id="item-1" class="service1-item zoom1">
+              <img src="../assets/shop/{{productDetails?.imageurl[1]}}" class = "img-responsive">
+            </a>
+            <a id="item-2" class="service1-item zoom1">
+              <img src="../assets/shop/{{productDetails?.imageurl[2]}}" class = "img-responsive">
+            </a>
+            <a id="item-3" class="service1-item zoom1">
+              <img src="../assets/shop/{{productDetails?.imageurl[3]}}" class = "img-responsive">
+            </a>
+          
+        </div>
+
+      <div class="col-md-7">
+        <div class="product-title">{{productDetails?.title}}</div>
+        <div class="product-desc">{{productDetails?.shortdescription}}</div>
+        <div class="product-rating"><i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star gold"></i> <i class="fa fa-star-o"></i> </div>
+        <hr>
+        <div class="product-price">Rs - {{productDetails?.price}}</div>
+        <div class="product-ostock" *ngIf = "available">Out of Stock</div>
+        <div class="product-stock" *ngIf = "!available">In Stock</div>
+        <hr>
+        <div class="btn-group cart" *ngIf = "!available">
+          <button type="button" class="btn btn-success" (click) = "addtocart(productDetails?.id)">
+            Add to cart 
+          </button>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="container-fluid">   
+    <div class="col-md-12 product-info">
+        <ul id="myTab" class="nav nav-tabs nav_tabs">
+          <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
+          <li><a href="#service-two" data-toggle="tab">REVIEWS</a></li>
+          
+        </ul>
+      <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="service-one">
+            <section class="container product-info">
+              <b>Product Description : </b>
+              <h5>{{productDetails?.longdescription}}</h5>
+            </section>
+          </div>
+        <div class="tab-pane fade" id="service-two">
+
+          <section class="container">
+              <!-- <h3 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align: center;">Please rate our product :)</h3>
+              <div class="rating rating2">
+              <a href="#5" title="Give 5 stars">★</a>
+              <a href="#4" title="Give 4 stars">★</a>
+              <a href="#3" title="Give 3 stars">★</a>
+              <a href="#2" title="Give 2 stars">★</a>
+              <a href="#1" title="Give 1 star">★</a>
+              </div> -->
+              <br>
+              <form id = "myForm">
+                <!-- <label>Name:</label> 
+                <input type="text" placeholder="Enter your name" [(ngModel)] = "user_name" [ngModelOptions]="{standalone: true}">
+                <br> -->
+                <label>Comments:</label> 
+                  <input type="text" class="form-control" rows="2" cols="60" placeholder="Optional" [(ngModel)] = "user_comment" [ngModelOptions]="{standalone: true}">
+                <br>
+                <div class = "wrapper">
+                    <button class= "btn btn-primary" (click) = "saveComment()">Post</button>
+                </div>
+              </form>
+              <h4>Thanks for reviewing!</h4>
+              <hr>
+              <div *ngFor = "let j of productDetails?.comments">
+                <h5><strong>Name:</strong> {{j.name}}</h5>
+                <h5><strong>Comment:</strong> {{j.comment}}</h5>
+                <hr>
+              </div>
+          </section>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+</div>
+</div>
